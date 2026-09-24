@@ -1,7 +1,7 @@
 /*
  * Accessibility menu: text size, high contrast, underline links.
- * Settings last for the current page view only. Nothing is saved in the
- * browser, because the privacy policy promises no browser storage.
+ * Settings are saved in localStorage on the visitor's device (covered in the
+ * privacy policy on legal.html) and shared by both pages.
  * The button sits bottom-right and lifts above the closing links when they
  * scroll into view, so it never covers them.
  */
@@ -10,7 +10,24 @@
 
   var FONT_STEPS = [100, 110, 125, 150];
   var DEFAULTS = { fontStep: 0, highContrast: false, underlineLinks: false };
-  var prefs = { fontStep: 0, highContrast: false, underlineLinks: false };
+  var STORAGE_KEY = 'accessibility-preferences';
+  var prefs = load();
+
+  function load() {
+    var p = { fontStep: 0, highContrast: false, underlineLinks: false };
+    try {
+      var saved = JSON.parse(window.localStorage.getItem(STORAGE_KEY) || '{}');
+      var step = Number(saved.fontStep);
+      if (step >= 0 && step < FONT_STEPS.length && Math.floor(step) === step) p.fontStep = step;
+      p.highContrast = saved.highContrast === true;
+      p.underlineLinks = saved.underlineLinks === true;
+    } catch (e) { /* bad or unavailable storage - use defaults */ }
+    return p;
+  }
+
+  function save() {
+    try { window.localStorage.setItem(STORAGE_KEY, JSON.stringify(prefs)); } catch (e) { /* session only */ }
+  }
   var GAP = 16;
 
   var css = [
@@ -93,6 +110,7 @@
     function update(patch) {
       for (var k in patch) prefs[k] = patch[k];
       apply();
+      save();
       sync();
       place();
     }
