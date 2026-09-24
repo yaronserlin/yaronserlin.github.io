@@ -1,0 +1,231 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Yaron Serlin - Junior Full-Stack Developer</title>
+<meta name="description" content="Yaron Serlin builds complete products solo, from the database to the deployed app. Computer Science student at the Open University of Israel, looking for an entry-level remote developer role.">
+<style>
+  :root {
+    --ink: #1d2129;
+    --ink-2: #5b6170;
+    --hairline: #e3e1dc;
+    --page: #faf8f5;
+    --card: #ffffff;
+    --accent: #2f5d3a;
+  }
+  * { box-sizing: border-box; }
+  html, body { margin: 0; padding: 0; }
+  body {
+    background: var(--page);
+    color: var(--ink);
+    font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, Helvetica, Arial, sans-serif;
+    line-height: 1.55;
+    -webkit-font-smoothing: antialiased;
+  }
+  .wrap { max-width: 860px; margin: 0 auto; padding: 48px 20px 72px; }
+  header h1 { font-size: 2.4rem; margin: 0 0 6px; letter-spacing: -0.02em; }
+  header .fact { color: var(--ink-2); font-size: 1.1rem; margin: 0 0 14px; }
+  header .intro { font-size: 1.05rem; max-width: 640px; margin: 0 0 20px; }
+  .link-row { display: flex; flex-wrap: wrap; gap: 12px; margin-bottom: 32px; }
+  .btn {
+    display: inline-flex; align-items: center; min-height: 40px;
+    padding: 8px 18px; border-radius: 999px; text-decoration: none;
+    font-weight: 600; font-size: 0.95rem; border: 1px solid var(--hairline);
+  }
+  .btn.primary { background: var(--ink); color: #fff; border-color: var(--ink); }
+  .btn.secondary { background: var(--card); color: var(--ink); }
+  figure { margin: 0 0 40px; }
+  figure img { width: 100%; border-radius: 12px; display: block; }
+  figcaption { color: var(--ink-2); font-size: 0.85rem; margin-top: 8px; }
+  section { margin-bottom: 48px; }
+  h2 { font-size: 1.4rem; margin: 0 0 16px; letter-spacing: -0.01em; }
+  .facts { background: var(--card); border: 1px solid var(--hairline); border-radius: 12px; padding: 4px 20px; margin-bottom: 16px; }
+  .fact-row { display: flex; gap: 16px; padding: 12px 0; border-bottom: 1px solid var(--hairline); }
+  .fact-row:last-child { border-bottom: none; }
+  .fact-row .label { flex: 0 0 130px; color: var(--ink-2); font-size: 0.9rem; }
+  .fact-row .value { flex: 1; }
+  a { color: var(--accent); }
+  .projects { display: grid; grid-template-columns: 1fr 1fr; gap: 20px; }
+  .project {
+    background: var(--card); border: 1px solid var(--hairline); border-radius: 12px;
+    padding: 20px; display: flex; flex-direction: column; gap: 12px;
+  }
+  .project .num { color: var(--ink-2); font-size: 0.85rem; font-weight: 600; }
+  .project h3 { margin: 0; font-size: 1.15rem; }
+  .project .eyebrow { color: var(--ink-2); font-size: 0.85rem; margin: 0; }
+  .project .shots { display: grid; grid-template-columns: repeat(auto-fit, minmax(90px, 1fr)); gap: 8px; }
+  .project .shots img { width: 100%; border-radius: 8px; background: #f1f4f9; display: block; }
+  .project .shots img.tall { max-height: 300px; object-fit: contain; }
+  .project .facts { margin: 0; padding: 2px 14px; }
+  .project .fact-row { padding: 8px 0; }
+  .project .fact-row .label { flex-basis: 110px; font-size: 0.82rem; }
+  .project .fact-row .value { font-size: 0.9rem; }
+  .project p { margin: 0; font-size: 0.95rem; }
+  .project .credit { color: var(--ink-2); font-size: 0.75rem; }
+  .project .links { display: flex; gap: 14px; font-size: 0.9rem; font-weight: 600; }
+  .rows { background: var(--card); border: 1px solid var(--hairline); border-radius: 12px; padding: 4px 20px; }
+  .row { display: flex; gap: 16px; align-items: baseline; padding: 12px 0; border-bottom: 1px solid var(--hairline); }
+  .row:last-child { border-bottom: none; }
+  .row .name { flex: 0 0 220px; font-weight: 600; }
+  .row .detail { flex: 1; color: var(--ink-2); }
+  .row .value { color: var(--ink-2); font-size: 0.9rem; white-space: nowrap; }
+  .closing { color: var(--ink-2); font-size: 0.85rem; border-top: 1px solid var(--hairline); padding-top: 20px; }
+  @media (max-width: 700px) {
+    .projects { grid-template-columns: 1fr; }
+    .row { flex-direction: column; gap: 2px; }
+    .row .name { flex-basis: auto; }
+    .fact-row { flex-direction: column; gap: 2px; }
+    .wrap { padding: 32px 16px 56px; }
+    header h1 { font-size: 1.9rem; }
+  }
+</style>
+</head>
+<body>
+<div class="wrap">
+
+  <header>
+    <h1>Yaron Serlin</h1>
+    <p class="fact">Junior full-stack developer &middot; React, Node.js, Java, Spring Boot</p>
+    <p class="intro">Builds complete products solo, from the database to the deployed app. Computer Science student at the Open University of Israel, looking for an entry-level remote developer role.</p>
+  </header>
+
+  <div class="link-row">
+    <a class="btn primary" href="https://github.com/yaronserlin" target="_blank" rel="noopener noreferrer">GitHub &#8599;</a>
+    <a class="btn secondary" href="https://www.linkedin.com/in/yaronserlin" target="_blank" rel="noopener noreferrer">LinkedIn &#8599;</a>
+    <a class="btn secondary" href="https://yaronserlin.onrender.com" target="_blank" rel="noopener noreferrer">Portfolio &#8599;</a>
+  </div>
+
+  <figure>
+    <img src="developer-desk-wide.jpg" alt="Illustration of a developer desk with a laptop, phone and a state-machine sketch">
+    <figcaption>Illustration.</figcaption>
+  </figure>
+
+  <section>
+    <h2>At a glance</h2>
+    <div class="facts">
+      <div class="fact-row"><span class="label">Looking for</span><span class="value">Entry-level developer role, remote</span></div>
+      <div class="fact-row"><span class="label">Education</span><span class="value">B.Sc. Computer Science, Open University of Israel, expected July 2027</span></div>
+      <div class="fact-row"><span class="label">Based in</span><span class="value">Israel / Australia, working remotely</span></div>
+      <div class="fact-row"><span class="label">Languages</span><span class="value">Hebrew (native), English (very good)</span></div>
+    </div>
+    <p>Email <a href="mailto:yaronsserlin@gmail.com">yaronsserlin@gmail.com</a> or call <a href="tel:+972542570203">+972 54-257-0203</a>.</p>
+  </section>
+
+  <section>
+    <h2>Four projects, each built solo</h2>
+    <p>Each one is a working app with its own code, docs and a link you can open.</p>
+    <div class="projects">
+
+      <div class="project">
+        <span class="num">1</span>
+        <h3>MaintenanceSystemApp</h3>
+        <p class="eyebrow">Web app &middot; React, Node.js, MongoDB</p>
+        <div class="shots">
+          <img class="tall" src="maintenance-dashboard.jpg" alt="Operations dashboard with fault counts and a 14-day maintenance trend chart">
+          <img class="tall" src="maintenance-equipment.jpg" alt="Equipment fleet management screen">
+        </div>
+        <p class="credit">Screenshots from the project repo</p>
+        <div class="facts">
+          <div class="fact-row"><span class="label">What it does</span><span class="value">Equipment, faults, preventive maintenance and spare parts for many companies in one app</span></div>
+          <div class="fact-row"><span class="label">Stack</span><span class="value">React 19, Vite, MUI, Node.js, Express 5, MongoDB, Mongoose</span></div>
+          <div class="fact-row"><span class="label">Tests</span><span class="value">Jest, React Testing Library, Supertest</span></div>
+        </div>
+        <p>Each company's data stays separate on every query and file. Admins, mechanics and operators get different permissions. Mechanics get push alerts when a fault is reported, and it installs as a PWA for field use. Security includes rate-limited login, HTTP-only JWT cookies, Helmet and input sanitising.</p>
+        <div class="links">
+          <a href="https://github.com/yaronserlin/MaintenanceSystemApp" target="_blank" rel="noopener noreferrer">Code</a>
+          <a href="https://maintenancesystemapp.onrender.com/" target="_blank" rel="noopener noreferrer">Live app</a>
+        </div>
+      </div>
+
+      <div class="project">
+        <span class="num">2</span>
+        <h3>CookSync</h3>
+        <p class="eyebrow">Android app &middot; Java, Spring Boot, MySQL</p>
+        <div class="shots">
+          <img class="tall" src="cooksync-home.jpg" alt="CookSync home screen with recipe cards">
+          <img class="tall" src="cooksync-cooking-mode.jpg" alt="Cooking Mode step with ingredients and a timer">
+          <img class="tall" src="cooksync-recipe-detail.jpg" alt="Recipe detail screen">
+          <img class="tall" src="cooksync-wizard-publish.jpg" alt="Final step of the publish-a-recipe wizard">
+        </div>
+        <p class="credit">Screenshots from the project repo</p>
+        <div class="facts">
+          <div class="fact-row"><span class="label">What it does</span><span class="value">Browse, save and publish recipes, with a step-by-step Cooking Mode and timers</span></div>
+          <div class="fact-row"><span class="label">Stack</span><span class="value">Java 17 Android (MVVM, Retrofit), Java 21 Spring Boot 3, MySQL, Flyway</span></div>
+          <div class="fact-row"><span class="label">Delivery</span><span class="value">Docker, GitHub Actions; every push to main builds a signed APK</span></div>
+        </div>
+        <p>A full product in three modules: the Android client, a REST API with stateless JWT auth, and a shared DTO library both sides use. It includes an admin console for moderation, Cloudinary for images, a user guide and a functional spec.</p>
+        <div class="links">
+          <a href="https://github.com/yaronserlin/cook-sync" target="_blank" rel="noopener noreferrer">Code</a>
+          <a href="https://yaronserlin.github.io/cook-sync/" target="_blank" rel="noopener noreferrer">Project page</a>
+        </div>
+      </div>
+
+      <div class="project">
+        <span class="num">3</span>
+        <h3>Share &amp; Copy</h3>
+        <p class="eyebrow">Web app &middot; React, Node.js, Socket.IO</p>
+        <div class="shots">
+          <img src="share-and-copy.jpg" alt="Share &amp; Copy landing screen">
+        </div>
+        <p class="credit">Screenshots from the project repo</p>
+        <div class="facts">
+          <div class="fact-row"><span class="label">What it does</span><span class="value">Sends files straight between your own devices, without storing them on a server</span></div>
+          <div class="fact-row"><span class="label">Stack</span><span class="value">React, Vite, Node.js, Express, MongoDB, Redis, Socket.IO</span></div>
+          <div class="fact-row"><span class="label">Pairing</span><span class="value">QR code or one-time code, so no password typed on a new device</span></div>
+        </div>
+        <p>The server only helps devices find each other. The dashboard shows which devices are online, risky file types are blocked, and any device can be revoked. Sign-in uses short-lived tokens with refresh rotation, and it installs as a PWA with notifications.</p>
+        <div class="links">
+          <a href="https://github.com/yaronserlin/ShareAndCopy" target="_blank" rel="noopener noreferrer">Code</a>
+          <a href="https://shareandcopy.onrender.com/" target="_blank" rel="noopener noreferrer">Live app</a>
+        </div>
+      </div>
+
+      <div class="project">
+        <span class="num">4</span>
+        <h3>Automata Editor</h3>
+        <p class="eyebrow">Browser tool &middot; JavaScript, SVG</p>
+        <div class="shots">
+          <img class="tall" src="automata-editor.jpg" alt="Automata Editor canvas with a two-state automaton">
+        </div>
+        <p class="credit">Screenshots from the project repo</p>
+        <div class="facts">
+          <div class="fact-row"><span class="label">What it does</span><span class="value">Draw DFA and NFA diagrams and export them for assignments and papers</span></div>
+          <div class="fact-row"><span class="label">Stack</span><span class="value">Vanilla JavaScript modules, SVG, KaTeX</span></div>
+          <div class="fact-row"><span class="label">Exports</span><span class="value">SVG, TikZ (LaTeX) and JSON save files</span></div>
+        </div>
+        <p>Made for a real student need: clean automata diagrams for assignments. Drag-and-drop states, LaTeX labels, edges that route around each other, self-loops, snapping and multi-select, with no framework.</p>
+        <div class="links">
+          <a href="https://github.com/yaronserlin/automata-editor" target="_blank" rel="noopener noreferrer">Code</a>
+          <a href="https://yaronserlin.github.io/automata-editor/" target="_blank" rel="noopener noreferrer">Try it</a>
+        </div>
+      </div>
+
+    </div>
+  </section>
+
+  <section>
+    <h2>Skills</h2>
+    <div class="rows">
+      <div class="row"><span class="name">Frontend</span><span class="detail">React, Vite, Material UI, JavaScript, HTML, CSS, PWAs</span></div>
+      <div class="row"><span class="name">Backend</span><span class="detail">Node.js, Express, Java, Spring Boot, REST APIs, JWT auth</span></div>
+      <div class="row"><span class="name">Data</span><span class="detail">MongoDB, MySQL, Redis, Flyway migrations</span></div>
+      <div class="row"><span class="name">Mobile</span><span class="detail">Android (Java, MVVM, Retrofit, LiveData)</span></div>
+      <div class="row"><span class="name">Delivery and quality</span><span class="detail">Docker, GitHub Actions, Jest, Supertest, Git</span></div>
+    </div>
+  </section>
+
+  <section>
+    <h2>Before software</h2>
+    <div class="rows">
+      <div class="row"><span class="name">UAV Pilot &amp; Operator (Reserves)</span><span class="detail">Israel Defense Forces</span><span class="value">2023&ndash;2026</span></div>
+      <div class="row"><span class="name">Agricultural Mechanic &amp; Fabricator</span><span class="detail">Ahituv Agricultural Services</span><span class="value">2020&ndash;2026</span></div>
+      <div class="row"><span class="name">Soldier</span><span class="detail">Israel Defense Forces</span><span class="value">2014&ndash;2017</span></div>
+    </div>
+  </section>
+
+  <p class="closing">Projects checked against GitHub on 23 Sep 2026.</p>
+
+</div>
+</body>
+</html>
